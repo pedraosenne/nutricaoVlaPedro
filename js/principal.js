@@ -8,3 +8,6 @@ titulo.textContent = ("Aparecida Nutricionista");
  var peso = tdPeso.textContent;
  console.log(paciente);
 console.log (tdPeso); 
+
+var paciente = document.querySelector("#primeiro-paciente")
+ var tdAltura = document.querySelector(".info-altura");
