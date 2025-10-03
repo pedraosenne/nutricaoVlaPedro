@@ -1,4 +1,4 @@
 var titulo = document.sequerySelector("h1");
 console.log(titulo);
-console.log(titlo.textContent);
+console.log(titulo.textContent);
 titulo.textContent("Aparecida Nutricionista");
