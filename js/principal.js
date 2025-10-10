@@ -20,7 +20,7 @@ console.log(altura);
 
  //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
  var pesoehValido = true;
-  var alturaehValido = true;
+  var alturaEhValido = true;
 
 if (peso < 0 || peso > 1000) {
    console.log("peso inválido");
