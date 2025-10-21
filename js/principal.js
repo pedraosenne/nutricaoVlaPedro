@@ -1,7 +1,7 @@
 var titulo = document.querySelector("h1");
 console.log(titulo);
 console.log(titulo.textContent);
-titulo.textContent = ("Curintia nutrição");
+titulo.textContent = ("Pedrinho nutrição");
 
 var pacientes = document.querySelectorAll(".paciente");
 for (var i = 0; i < pacientes.length; i++) {
