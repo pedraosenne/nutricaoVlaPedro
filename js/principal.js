@@ -6,11 +6,8 @@ titulo.textContent = ("nickin nutricao");
 
 var pacientes = paciente.querySelectorAll(".paciente");
 
-
 for (var i = 0; i < pacientes.length; i++) {
-
     var paciente = pacientes[i];
-};
 
 
 var tdPeso = paciente.querySelector(".info-peso");
@@ -46,6 +43,9 @@ if (alturaEhValida && pesoEhValido) {
     var imc = peso / (altura * altura);
     tdImc.textContent = imc;
 }
+};
+
+
 
 
 
