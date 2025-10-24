@@ -28,7 +28,7 @@ for (var i = 0; i < pacientes.length; i++) {
     if (altura <= 0 || altura >= 3.00) {
         console.log("Altura invalida!");
         alturaEhValida = false;
-        tdImc.textContent = imc.toFixed(2)
+        tdImc.textContent = imc.toFixed(2);
     }
 
     if (alturaEhValida && pesoEhValido) {
