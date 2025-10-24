@@ -7,7 +7,7 @@ titulo.textContent = ("Nego nutritations");
 var pacientes = document.querySelectorAll(".paciente");
 
 for (var i = 0; i < pacientes.length; i++) {
-
+    
     var paciente = pacientes[i];
 
     var tdPeso = paciente.querySelector(".info-peso");
@@ -19,23 +19,25 @@ for (var i = 0; i < pacientes.length; i++) {
     var tdImc = paciente.querySelector(".info-imc");
 
     var pesoEhValido = true;
-    var alturaEhValido = true;
+    var alturaEhValida = true;
 
     if (peso <= 0 || peso >= 1000) {
         console.log("Peso inválido!");
-        pesoEhvalido = false;
-        tdImc.textContent = "Peso inválido!";
+        pesoEhValido = false;
+        tdImc.textContent = "Peso inválido";
+      
         paciente.style.backgroundColor = "lightcoral";
     }
 
     if (altura <= 0 || altura >= 3.00) {
         console.log("Altura inválida!");
-        alturaEhValido = false;
-        tdImc.textContent = "Altura inválida!";
+        alturaEhValida = false;
+        tdImc.textContent = "Altura inválida";
+   
         paciente.style.backgroundColor = "lightblue";
     }
 
-    if (alturaEhValido && pesoEhValido) {
+  if (alturaEhValida && pesoEhValido) {
         var imc = peso / (altura * altura);
         tdImc.textContent = imc.toFixed(2);
     }
