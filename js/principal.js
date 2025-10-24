@@ -1,9 +1,11 @@
+//console.log(document.querySelector("h1"));
 var titulo = document.querySelector("h1");
 console.log(titulo);
 console.log(titulo.textContent);
-titulo.textContent = ("Pedrinho nutrição");
+titulo.textContent = ("Nego nutritations");
 
 var pacientes = document.querySelectorAll(".paciente");
+
 for (var i = 0; i < pacientes.length; i++) {
 
     var paciente = pacientes[i];
@@ -17,22 +19,24 @@ for (var i = 0; i < pacientes.length; i++) {
     var tdImc = paciente.querySelector(".info-imc");
 
     var pesoEhValido = true;
-    var alturaEhValida = true;
+    var alturaEhValido = true;
 
     if (peso <= 0 || peso >= 1000) {
-        console.log("Peso invalido");
-        pesoEhValido = false;
-        tdImc.textContent = "Peso ivalido";
+        console.log("Peso inválido!");
+        pesoEhvalido = false;
+        tdImc.textContent = "Peso inválido!";
+        paciente.style.backgroundColor = "lightcoral";
     }
 
     if (altura <= 0 || altura >= 3.00) {
-        console.log("Altura invalida!");
-        alturaEhValida = false;
-        tdImc.textContent = imc.toFixed(2);
+        console.log("Altura inválida!");
+        alturaEhValido = false;
+        tdImc.textContent = "Altura inválida!";
+        paciente.style.backgroundColor = "lightblue";
     }
 
-    if (alturaEhValida && pesoEhValido) {
+    if (alturaEhValido && pesoEhValido) {
         var imc = peso / (altura * altura);
-        tdImc.textContent = imc;
+        tdImc.textContent = imc.toFixed(2);
     }
 }
