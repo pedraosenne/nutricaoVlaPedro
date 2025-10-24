@@ -3,9 +3,7 @@ console.log(titulo);
 console.log(titulo.textContent);
 titulo.textContent = ("Aparecida Nutricionista");
 
-
 21/10
-
 var pacientes = document.querySelectorAll(".paciente");
 
 for (var i = 0; i < pacientes.length; i++) {
@@ -28,7 +26,7 @@ for (var i = 0; i < pacientes.length; i++) {
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido";
         // paciente.style.backgroundColor = "red";
-        paciente.classList.add("paciente-invalido");
+      //  paciente.classList.add("paciente-invalido");
         paciente.style.backgroundColor = "lightcoral";
     }
 
@@ -36,7 +34,7 @@ for (var i = 0; i < pacientes.length; i++) {
         console.log("Altura inválida!");
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida";
-        paciente.classList.add("paciente-invalido");
+      //  paciente.classList.add("paciente-invalido");
         paciente.style.backgroundColor = "lightblue";
     }
 
