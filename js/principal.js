@@ -3,11 +3,13 @@ console.log(titulo);
 console.log(titulo.textContent);
 titulo.textContent = ("Aparecida Nutricionista");
 
+
 21/10
+
 var pacientes = document.querySelectorAll(".paciente");
 
 for (var i = 0; i < pacientes.length; i++) {
-    
+
     var paciente = pacientes[i];
 
     var tdPeso = paciente.querySelector(".info-peso");
@@ -26,16 +28,14 @@ for (var i = 0; i < pacientes.length; i++) {
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido";
         // paciente.style.backgroundColor = "red";
-      //  paciente.classList.add("paciente-invalido");
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-invalido");
     }
 
     if (altura <= 0 || altura >= 3.00) {
         console.log("Altura inválida!");
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida";
-      //  paciente.classList.add("paciente-invalido");
-        paciente.style.backgroundColor = "lightblue";
+         paciente.classList.add("paciente-invalido");
     }
 
   if (alturaEhValida && pesoEhValido) {
@@ -43,3 +43,17 @@ for (var i = 0; i < pacientes.length; i++) {
         tdImc.textContent = imc.toFixed(2);
     }
 }
+
+// 23/10
+
+// titulo.addEventListener() adiciona um escutador de eventos. 
+// PRIMEIRO MOSTRAR ESSA - DEPOIS ALTERA-LA PARA FICAR ANONIMA
+titulo.addEventListener("click", mostraMensagem);
+function mostraMensagem(){
+    alert("Olá eu fui clicado.")
+}
+
+// funcao anonima = a de cima mas diferente
+titulo.addEventListener("click", function(){
+    alert("Ola eu fui clicado numa funcao anonima");
+});
