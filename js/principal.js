@@ -57,3 +57,8 @@ function mostraMensagem(){
 titulo.addEventListener("click", function(){
     alert("Ola eu fui clicado numa funcao anonima");
 });
+
+titulo.addEventListener("click", mostramensagem);
+ function mostramensgem(){
+    alert("Olá eu fui clicado.")
+ }
