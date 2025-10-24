@@ -1,8 +1,10 @@
-//console.log(document.querySelector("h1"));
 var titulo = document.querySelector("h1");
 console.log(titulo);
 console.log(titulo.textContent);
-titulo.textContent = ("Nego nutritations");
+titulo.textContent = ("Aparecida Nutricionista");
+
+
+21/10
 
 var pacientes = document.querySelectorAll(".paciente");
 
@@ -25,7 +27,8 @@ for (var i = 0; i < pacientes.length; i++) {
         console.log("Peso inválido!");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido";
-      
+        // paciente.style.backgroundColor = "red";
+        paciente.classList.add("paciente-invalido");
         paciente.style.backgroundColor = "lightcoral";
     }
 
@@ -33,7 +36,7 @@ for (var i = 0; i < pacientes.length; i++) {
         console.log("Altura inválida!");
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida";
-   
+        paciente.classList.add("paciente-invalido");
         paciente.style.backgroundColor = "lightblue";
     }
 
