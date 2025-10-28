@@ -62,3 +62,14 @@ titulo.addEventListener("click", mostramensagem);
  function mostramensgem(){
     alert("Olá eu fui clicado.")
  }
+
+ var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function (event) {
+event.preventDefault();
+alert("OI eu sou o botão e fui clicado");
+var from = document.querySekector("#from-adiciona");
+
+var nome  = from.nome.value;
+var peso = from.peso.valeus;
+var 
+});
