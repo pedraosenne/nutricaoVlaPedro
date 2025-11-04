@@ -1,10 +1,4 @@
 
-var titulo = document.querySelector("h1");
-console.log(titulo);
-console.log(titulo.textContent);
-titulo.textContent = ("Aparecida Nutricionista");
-
-
 var pacientes = document.querySelectorAll(".paciente");
 
 for (var i = 0; i < pacientes.length; i++) {
@@ -26,6 +20,7 @@ for (var i = 0; i < pacientes.length; i++) {
         console.log("Peso inválido!");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido";
+        // paciente.style.backgroundColor = "red";
         paciente.classList.add("paciente-invalido");
     }
 

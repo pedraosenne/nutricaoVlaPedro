@@ -1,4 +1,17 @@
+var titulo = document.querySelector("h1");
+console.log(titulo);
+console.log(titulo.textContent);
+titulo.textContent = ("Aparecida Nutricionista");
 
+
+21/10
+
+
+  if (alturaEhValida && pesoEhValido) {
+        var imc = peso / (altura * altura);
+        tdImc.textContent = imc.toFixed(2);
+    }
+}
 
 // titulo.addEventListener() adiciona um escutador de eventos. 
 // PRIMEIRO MOSTRAR ESSA - DEPOIS ALTERA-LA PARA FICAR ANONIMA
