@@ -1,89 +1,79 @@
+//console.log(document.querySelector("h1"));
 var titulo = document.querySelector("h1");
 console.log(titulo);
 console.log(titulo.textContent);
-titulo.textContent = ("Aparecida Nutricionista");
-
-
-21/10
+titulo.textContent = ("Nego nutritations");
 
 var pacientes = document.querySelectorAll(".paciente");
 
-for (var i = 0; i < pacientes.length; i++) {
+for(var i = 0; i < pacientes.length; i++) {
 
-    var paciente = pacientes[i];
+var paciente = pacientes[i];
 
-    var tdPeso = paciente.querySelector(".info-peso");
-    var peso = tdPeso.textContent;
+var tdPeso = paciente.querySelector(".info-peso");
+var peso = tdPeso.textContent;
 
-    var tdAltura = paciente.querySelector(".info-altura");
-    var altura = tdAltura.textContent;
+var tdAltura = paciente.querySelector(".info-altura");
+var altura = tdAltura.textContent;
 
-    var tdImc = paciente.querySelector(".info-imc");
+var tdImc = paciente.querySelector(".info-imc");
 
-    var pesoEhValido = true;
-    var alturaEhValida = true;
+var pesoEhValido = true;
+var alturaEhValido = true;
 
-    if (peso <= 0 || peso >= 1000) {
-        console.log("Peso inválido!");
-        pesoEhValido = false;
-        tdImc.textContent = "Peso inválido";
-        // paciente.style.backgroundColor = "red";
-        paciente.classList.add("paciente-invalido");
-    }
-
-    if (altura <= 0 || altura >= 3.00) {
-        console.log("Altura inválida!");
-        alturaEhValida = false;
-        tdImc.textContent = "Altura inválida";
-         paciente.classList.add("paciente-invalido");
-    }
-
-  if (alturaEhValida && pesoEhValido) {
-        var imc = peso / (altura * altura);
-        tdImc.textContent = imc.toFixed(2);
-    }
+if (peso <= 0 || peso >= 1000){
+console.log("Peso inválido!");
+pesoEhvalido = false;
+tdImc.textContent = "Peso inválido!";
+paciente.classList.add("paciente-invalido");
 }
 
-// titulo.addEventListener() adiciona um escutador de eventos. 
-// PRIMEIRO MOSTRAR ESSA - DEPOIS ALTERA-LA PARA FICAR ANONIMA
+if (altura <= 0 || altura >= 3.00){
+console.log("Altura inválida!");
+alturaEhValido = false;
+tdImc.textContent = "Altura inválida!";
+paciente.classList.add("paciente-invalido");
+}
+
+if (alturaEhValido && pesoEhValido){
+var imc = peso / (altura * altura);
+tdImc.textContent = imc.toFixed(2);
+}
+}
+
+
 titulo.addEventListener("click", mostraMensagem);
 function mostraMensagem(){
-    alert("Olá eu fui clicado.")
+alert("Olá eu fui clicado.")
 }
 
-// funcao anonima = a de cima mas diferente
-titulo.addEventListener("click", function(){
-    alert("Ola eu fui clicado numa funcao anonima");
-});
-
-titulo.addEventListener("click", mostramensagem);
- function mostramensgem(){
-    alert("Olá eu fui clicado.")
- }
-
- var botaoAdicionar = document.querySelector("#adicionar-paciente");
-botaoAdicionar.addEventListener("click", function (event) {
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function(event){
 event.preventDefault();
-alert("OI eu sou o botão e fui clicado");
-var from = document.querySekector("#from-adiciona");
+//alert("Oi eu sou o botão e fui clicado");
 
-var nome  = from.nome.value;
-var peso = from.peso.valeus;
-var altura = form.altura.valeus;
-var gordura = form.gordura.valeus;
- 
- var pacienteTr = documen.createElemnts("tr");
 
- var nomeTd = DocumentType.createElemnts ("td");
- var pesoTd = DocumentType.createElemnts ("td");
- var alturaTd = DocumentType.createElemnts ("td");
- var gorduraTd = DocumentType.createElemnts ("td");
- var imcTd = DocumentType.createElemnts ("td");
+var form = document.querySelector("#form-adiciona");
 
- nomeTd.textContent = nome;
- nometd.textContent = peso;
- alturaTd.textContent = altura;
- gorduraTd.textContent = gordura;
+var nome = form.nome.value;
+var peso = form.peso.value;
+var altura = form.altura.value;
+var gordura = form.gordura.value;
+
+var pacienteTr = document.createElement("tr");
+
+var nomeTd = document.createElement("td");
+var pesoTd = document.createElement("td");
+var alturaTd = document.createElement("td");
+var gorduraTd = document.createElement("td");
+var imcTd = document.createElement("td");
+
+
+nomeTd.textContent = nome;
+pesoTd.textContent = peso;
+alturaTd.textContent = altura;
+gorduraTd.textContent = gordura;
+//imcTd.textContent = imc;
 
 pacienteTr.appendChild(nomeTd);
 pacienteTr.appendChild(pesoTd);
@@ -92,6 +82,5 @@ pacienteTr.appendChild(gorduraTd);
 
 var tabela = document.querySelector("#tabela-pacientes");
 tabela.appendChild(pacienteTr);
-
 
 });
