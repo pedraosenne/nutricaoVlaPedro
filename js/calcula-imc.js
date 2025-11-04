@@ -1,66 +1,73 @@
+//console.log(document.querySelector("h1"));
 var titulo = document.querySelector("h1");
 console.log(titulo);
 console.log(titulo.textContent);
-titulo.textContent = ("Aparecida Nutricionista");
+titulo.textContent = ("Nego nutritations");
 
 
-21/10
+var pacientes = document.querySelectorAll(".paciente");
 
 
-  if (alturaEhValida && pesoEhValido) {
-        var imc = peso / (altura * altura);
-        tdImc.textContent = imc.toFixed(2);
-    }
+for(var i = 0; i < pacientes.length; i++) {
+
+
+var paciente = pacientes[i];
+
+
+var tdPeso = paciente.querySelector(".info-peso");
+var peso = tdPeso.textContent;
+
+
+var tdAltura = paciente.querySelector(".info-altura");
+var altura = tdAltura.textContent;
+
+
+var tdImc = paciente.querySelector(".info-imc");
+
+
+var pesoEhValido = true;
+var alturaEhValido = true;
+
+
+if (peso <= 0 || peso >= 1000){
+console.log("Peso inválido!");
+pesoEhvalido = false;
+tdImc.textContent = "Peso inválido!";
+paciente.classList.add("paciente-invalido");
 }
 
-// titulo.addEventListener() adiciona um escutador de eventos. 
-// PRIMEIRO MOSTRAR ESSA - DEPOIS ALTERA-LA PARA FICAR ANONIMA
+
+if (altura <= 0 || altura >= 3.00){
+console.log("Altura inválida!");
+alturaEhValido = false;
+tdImc.textContent = "Altura inválida!";
+paciente.classList.add("paciente-invalido");
+}
+
+
+if (alturaEhValido && pesoEhValido){
+var imc = peso / (altura * altura);
+tdImc.textContent = imc.toFixed(2);
+}
+}
+
+
+function calculaImc (peso, altura){
+  var imc= 0;
+
+
+}
+
+
+
+
 titulo.addEventListener("click", mostraMensagem);
 function mostraMensagem(){
-    alert("Olá eu fui clicado.")
+alert("Olá eu fui clicado.")
 }
 
-// funcao anonima = a de cima mas diferente
-titulo.addEventListener("click", function(){
-    alert("Ola eu fui clicado numa funcao anonima");
-});
-
-titulo.addEventListener("click", mostramensagem);
- function mostramensgem(){
-    alert("Olá eu fui clicado.")
- }
-
- var botaoAdicionar = document.querySelector("#adicionar-paciente");
-botaoAdicionar.addEventListener("click", function (event) {
-event.preventDefault();
-alert("OI eu sou o botão e fui clicado");
-var from = document.querySekector("#from-adiciona");
-
-var nome  = from.nome.value;
-var peso = from.peso.valeus;
-var altura = form.altura.valeus;
-var gordura = form.gordura.valeus;
- 
- var pacienteTr = documen.createElemnts("tr");
-
- var nomeTd = DocumentType.createElemnts ("td");
- var pesoTd = DocumentType.createElemnts ("td");
- var alturaTd = DocumentType.createElemnts ("td");
- var gorduraTd = DocumentType.createElemnts ("td");
- var imcTd = DocumentType.createElemnts ("td");
-
- nomeTd.textContent = nome;
- nometd.textContent = peso;
- alturaTd.textContent = altura;
- gorduraTd.textContent = gordura;
-
-pacienteTr.appendChild(nomeTd);
-pacienteTr.appendChild(pesoTd);
-pacienteTr.appendChild(alturaTd);
-pacienteTr.appendChild(gorduraTd);
-
-var tabela = document.querySelector("#tabela-pacientes");
-tabela.appendChild(pacienteTr);
 
 
-});
+
+
+
